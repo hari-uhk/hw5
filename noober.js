@@ -69,5 +69,37 @@ function renderRides(ridesArray) {
 
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
+  let allRidesButton     = document.querySelector('#all-filter')
+  let nooberPoolButton   = document.querySelector('#noober-pool-filter')
+  let nooberPurpleButton = document.querySelector('#noober-purple-filter')
+  let nooberXlButton     = document.querySelector('#noober-xl-filter')
+  let nooberXButton      = document.querySelector('#noober-x-filter')
+
+  allRidesButton.addEventListener('click', async function(event){
+    // console.log('all rides clicked')
+    let response = await fetch('https://kiei451.com/api/rides.json')
+    // console.log(response)
+    let json = await response.json()
+    console.log(json)
+    let rides = document.querySelector('.rides')
+    // console.log(ridescontainer)
+    rides.innerHTML = renderRides(json)
+  })
+
+
+
+
+
+
+
+  nooberPoolButton.addEventListener('click', function(event){
+    console.log('pool rides clicked')
+
+  })
+
+  nooberPoolButton.addEventListener('click', function(event){
+    console.log('pool rides clicked')
+
+  })
 })
 
