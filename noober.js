@@ -74,7 +74,8 @@ window.addEventListener('DOMContentLoaded', function() {
   let nooberPurpleButton = document.querySelector('#noober-purple-filter')
   let nooberXlButton     = document.querySelector('#noober-xl-filter')
   let nooberXButton      = document.querySelector('#noober-x-filter')
-
+  
+  
   allRidesButton.addEventListener('click', async function(event){
     event.preventDefault()
     console.log('all rides clicked')
